@@ -97,3 +97,43 @@ button#add-btn:hover {
 input::placeholder {
   color: #7B2CBF;
 }
+
+.job-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.company {
+  font-size: 15px;
+  font-weight: 600;
+  color: #E0AAFF;
+}
+
+.role {
+  font-size: 13px;
+  color: #C77DFF;
+}
+
+.date {
+  font-size: 11px;
+  color: #7B2CBF;
+}
+
+.job-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.applied { background-color: #1a3a5c; color: #60a5fa; }
+.interview { background-color: #3a2a00; color: #fbbf24; }
+.offer { background-color: #0a3a1a; color: #34d399; }
+.rejected { background-color: #3a0a0a; color: #f87171; }

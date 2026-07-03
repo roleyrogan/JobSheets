@@ -12,27 +12,55 @@ let jobs = JSON.parse(localStorage.getItem('jobs')) || [];
 //function to render the jobs from storage
 function renderJobs() {
     jobList.innerHTML = '';
-    //go through every job item in the jobs array and run this function
     jobs.forEach(function(job, index) {
-        //list item
         const li = document.createElement('li');
-        //adds text to the list, and adds a delete button with the delete function
-        li.textContent = job.company + ' - ' + job.role + ' - ' + job.status + ' - ' + job.date;
+
+        //left-side job info
+        const jobInfo = document.createElement('div');
+        jobInfo.className = 'job-info';
+
+        const company = document.createElement('span');
+        company.className = 'company';
+        company.textContent = job.company;
+
+        const role = document.createElement('span');
+        role.className = 'role';
+        role.textContent = job.role;
+
+        const date = document.createElement('span');
+        date.className = 'date';
+        date.textContent = job.date;
+
+        jobInfo.appendChild(company);
+        jobInfo.appendChild(role);
+        jobInfo.appendChild(date);
+
+        //right side - status badge and delete button
+        const jobActions = document.createElement('div');
+        jobActions.className = 'job-actions';
+
+        const statusBadge = document.createElement('div');
+        statusBadge.className = 'status-badge ' + job.status.toLowerCase();
+        statusBadge.textContent = job.status;
+
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Delete';
-        //whenever you click on the delete button, it goes to the current index in the 
-        //jobs array and deletes '1' item
-        deleteBtn.addEventListener('click', function(){
+        deleteBtn.addEventListener('click', function() {
             jobs.splice(index, 1);
             localStorage.setItem('jobs', JSON.stringify(jobs));
             renderJobs();
         });
-        //adds the delete button
-        li.appendChild(deleteBtn);
-        //adds the list item to the joblist array 
+
+        jobActions.appendChild(statusBadge);
+        jobActions.appendChild(deleteBtn);
+
+        li.appendChild(jobInfo);
+        li.appendChild(jobActions);
         jobList.appendChild(li);
     });
-}
+   
+   
+};
 
 addBtn.addEventListener('click', function() {
     const company = companyInput.value;
