@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #10002B;
+  color: #E0AAFF;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #E0AAFF;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+}
+
+#form {
+  background-color: #240046;
+  border: 1px solid #3C096C;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, select {
+  background-color: #10002B;
+  border: 1px solid #3C096C;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #E0AAFF;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #7B2CBF;
+}
+
+button#add-btn {
+  background-color: #7B2CBF;
+  color: #E0AAFF;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button#add-btn:hover {
+  background-color: #9D4EDD;
+}
+
+#job-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#job-list li {
+  background-color: #240046;
+  border: 1px solid #3C096C;
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+#job-list li button {
+  background-color: transparent;
+  border: 1px solid #7B2CBF;
+  color: #C77DFF;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#job-list li button:hover {
+  background-color: #3C096C;
+}
+
+input::placeholder {
+  color: #7B2CBF;
+}
