@@ -57,8 +57,4 @@ JobSheets is actively being improved. Planned features for upcoming versions:
 - User authentication so your applications sync across devices
 - Notes field for each application to track interview details and follow ups
 
----
 
-## Author
-
-Ronan Gamboa — [GitHub](https://github.com/roleyrogan) · [LinkedIn](#)
