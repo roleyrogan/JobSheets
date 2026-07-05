@@ -6,7 +6,7 @@ const jobList = document.getElementById('job-list');
 
 
 //basically gets the jobs from storage
-//if there isn't it just creates an emptry orray
+//if there isn't it just creates an empty orray
 let jobs = JSON.parse(localStorage.getItem('jobs')) || [];
 
 //function to render the jobs from storage
