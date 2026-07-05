@@ -137,3 +137,30 @@ input::placeholder {
 .interview { background-color: #3a2a00; color: #fbbf24; }
 .offer { background-color: #0a3a1a; color: #34d399; }
 .rejected { background-color: #3a0a0a; color: #f87171; }
+
+#summary {
+  max-width: 600px;
+  margin: 0 auto 24px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#total {
+  font-size: 13px;
+  color: #C77DFF;
+  margin-right: 4px;
+}
+
+.summary-badge {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.applied-summary { background-color: #1a3a5c; color: #60a5fa; }
+.interview-summary { background-color: #3a2a00; color: #fbbf24; }
+.offer-summary { background-color: #0a3a1a; color: #34d399; }
+.rejected-summary { background-color: #3a0a0a; color: #f87171; }

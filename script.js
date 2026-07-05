@@ -59,7 +59,7 @@ function renderJobs() {
         jobList.appendChild(li);
     });
    
-   
+   updateSummary();
 };
 
 addBtn.addEventListener('click', function() {
@@ -85,7 +85,24 @@ addBtn.addEventListener('click', function() {
     companyInput.value = '';
     roleInput.value = '';
     renderJobs();
+    updateSummary();
 });
+
+//function for getting the summary 
+function updateSummary(){
+    const total = jobs.length;
+    const applied = jobs.filter(function(job) {return job.status === 'Applied';}).length;
+    const interview = jobs.filter(function(job) {return job.status === 'Interview';}).length;
+    const offer = jobs.filter(function(job) {return job.status === 'Offer';}).length;
+    const rejected = jobs.filter(function(job) {return job.status === 'Rejected';}).length;
+
+    document.getElementById('total').textContent = 'Total: ' + total;
+    document.querySelector('.applied-summary').textContent = 'Applied: ' + applied;
+    document.querySelector('.interview-summary').textContent = 'Interview: ' + interview;
+    document.querySelector('.rejected-summary').textContent = 'Rejected: ' + rejected;
+    document.querySelector('.offer-summary').textContent = 'Offer: ' + offer;
+}
 
 //render the jobs
 renderJobs();
+
